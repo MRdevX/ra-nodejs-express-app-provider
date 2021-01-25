@@ -1,0 +1,40 @@
+{
+  "name": "ra-nodejs-express-app-provider",
+  "version": "1.0.0",
+  "description": "create-nodejs-express-app REST data provider for react-admin.",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "files": [
+    "*.md",
+    "lib",
+    "esm",
+    "src"
+  ],
+  "scripts": {
+    "build": "yarn run build-cjs && yarn run build-esm",
+    "build-cjs": "rimraf ./lib && tsc",
+    "build-esm": "rimraf ./esm && tsc --outDir esm --module es2015",
+    "watch": "tsc --outDir esm --module es2015 --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MRdevX/ra-nodejs-express-app-provider.git"
+  },
+  "author": "Mahdi Rashidi (m8rashidi@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MRdevX/ra-nodejs-express-app-provider/issues"
+  },
+  "homepage": "https://github.com/MRdevX/ra-nodejs-express-app-provider#readme",
+  "dependencies": {
+    "query-string": "^6.13.8"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "rimraf": "^3.0.2"
+  },
+  "peerDependencies": {
+    "ra-core": "^3.11.3"
+  }
+}
